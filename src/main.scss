@@ -1,0 +1,100 @@
+/* 全局样式 */
+body{
+  margin: 0;
+}
+#app{
+  font-family: "museo-sans","Helvetica Neue",Helvetica,Arial,sans-serif,sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+}
+//导航列表
+.nav-list {
+  display: block;
+  text-align: right;
+  .item {
+    display: inline-block;
+    margin: 0 10px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+  .item:hover,.item.active {
+    transition: 1.6s;
+    border-color: rgb(24, 127, 223);
+  }
+}
+//slogan
+.slogan {
+  margin: 50px 0;
+  text-align: center;
+  font-family: cursive;
+  .word {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+  img {
+    width: 66%;
+  }
+}
+
+//文章列表
+.article-list {
+  color: #464a4d;
+  .article {
+    margin-bottom: 10px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 8px;
+    padding: 12px 16px;
+    overflow: hidden;
+    line-height: 20px;
+    .left {
+      float: left;
+      font-size: 13px;
+      width: 20%;
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+    .right {
+      overflow: hidden;
+      font-size: 14px;
+      color: #3c4043;
+      padding-left: 16px;
+      line-height: 1.6;
+      .title {
+        color: #1967d2;
+        font-size: 16px;
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 420px) {
+  .slogan {
+    margin: 1rem 0;
+    .word {
+      margin-top: 0.8rem;
+      font-size: 1.1rem;
+    }
+  }
+  //文章列表
+  .article-list {
+    .article {
+      .right {
+        font-size: 0.8rem;
+        .title {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  //导航列表
+  .nav-list {
+    .item {
+      font-size: 0.93rem;
+    }
+  }
+}

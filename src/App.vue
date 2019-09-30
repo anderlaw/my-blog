@@ -23,10 +23,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  #app{
-    font-family: "museo-sans","Helvetica Neue",Helvetica,Arial,sans-serif,sans-serif;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-</style>
