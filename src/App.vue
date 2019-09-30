@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Nav/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Nav from '@/components/nav.vue'
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  components:{Nav},
+  methods:{
+    adapScreen(){
+      document.documentElement.style.fontSize = window.innerWidth/750*32+'px';
+    }
+  },
+  mounted(){
+    window.onresize = ()=>{
+      this.adapScreen();
+    }
+    this.adapScreen();
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  #app{
+    font-family: "museo-sans","Helvetica Neue",Helvetica,Arial,sans-serif,sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 </style>
