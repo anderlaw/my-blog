@@ -51,13 +51,20 @@ export default {
     if(path === '/'){
       this.$store.commit('update_articleType',type)
     }
-    console.log(this.$store.state);
+    
+    //设置固定
+    var height = document.querySelector('.nav-wrapper').clientHeight;
+    document.querySelector('#app').style.paddingTop = height + 'px';
   }
 };
 </script>
 
 <style scoped lang="scss">
 .nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
   font-size: 16px;
