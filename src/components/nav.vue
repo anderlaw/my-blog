@@ -2,8 +2,9 @@
   <div class="nav-wrapper">
     <div class="nav-list" @click="handleNavClick">
       <div :class="`item ${isActive('all')}`" tag="all">全部文章</div>
-      <div :class="`item ${isActive('tech')}`" tag="tech">技术博客</div>
+      <div :class="`item ${isActive('tech')}`" tag="tech">IT技术</div>
       <div :class="`item ${isActive('travel')}`" tag="travel">旅行日记</div>
+      <div :class="`item ${isActive('talk')}`" tag="talk">杂谈</div>
       <div class="item" tag="contact">联系</div>
     </div>
     <div class="contact-me" v-show="contactVisible">
