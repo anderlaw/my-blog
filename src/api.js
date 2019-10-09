@@ -1,4 +1,4 @@
-const baseUrl = 'http://106.13.170.74:3000/api';
+const baseUrl = 'https://www.tech-share.cn/api';
 const xhr = new XMLHttpRequest();
 export default function ajax({url,params,callback}) {  
     let queryStr = '?';
